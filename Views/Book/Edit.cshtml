@@ -1,0 +1,28 @@
+@model BookMvc.Models.RequestModel.BookRequestModel
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Book</h2>
+            <hr/>
+        </div>
+        
+        
+        <div class="mb-3">
+            <label asp-for="BookTitle"></label>
+            <input asp-for="BookTitle" class="form-control">
+            <span asp-validation-for="BookTitle" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="BookPrice"></label>
+            <input asp-for="BookPrice" class="form-control">
+             <span asp-validation-for="BookPrice" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="AuthorName"></label>
+            <input asp-for="AuthorName" class="form-control">
+             <span asp-validation-for="AuthorName" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 150px;">Edit</button>
+        <a asp-controller="Book" asp-action="Index" class="btn btn-secondary" style="width: 150px;">Back </a>
+    </div>
+</form>
